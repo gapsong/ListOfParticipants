@@ -54,11 +54,16 @@ class Contact extends React.Component {
               </div>
               <div className="form-group">
                 <div class="checkbox">
-                  <label htmlFor="checkbox" className="col-sm-2">Remember me</label>
+                  <label htmlFor="checkbox" className="col-sm-2">Subscribe Newsletter</label>
                   <div className="col-sm-8">
                     <input type="checkbox" name="newsletterToggle" id="newsletterToggle" value={this.state.newsletterToggle} onChange={this.toggleChange.bind(this)}/>
                   </div>
                 </div>
+              </div>
+              <div className="form-group">
+                <p type="text" className="col-sm-offset-2 col-sm-8">
+                  <em> You consent to receiving our email newsletter, by toggling the checkbox</em>
+                </p>
               </div>
               <div className="form-group">
                 <div className="col-sm-offset-2 col-sm-8">
