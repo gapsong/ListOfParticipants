@@ -51,7 +51,10 @@ if (app.get('env') === 'development') {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
+var pg = require('pg');
+
 app.post('/contact', contactController.contactPost);
+app.get('/emails', contactController.addSubscriber);
 
 // React server rendering
 app.use(function(req, res) {

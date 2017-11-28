@@ -1,4 +1,4 @@
-export function submitContactForm(name, email, message) {
+export function submitContactForm(name, email, wantNewsletter) {
   return (dispatch) => {
     dispatch({
       type: 'CLEAR_MESSAGES'
@@ -9,7 +9,7 @@ export function submitContactForm(name, email, message) {
       body: JSON.stringify({
         name: name,
         email: email,
-        message: message
+        wantNewsletter: wantNewsletter
       })
     }).then((response) => {
       if (response.ok) {
